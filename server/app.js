@@ -15,7 +15,23 @@ import {
 
 const app = express()
 
-app.use(cors())
+// CORS configuration for production
+const allowedOrigins = [
+  'http://localhost:5173',           // Local development
+  'http://localhost:3000',           // Alternative local port
+  process.env.FRONTEND_URL,          // Production frontend (set in Render env vars)
+].filter(Boolean)
+
+app.use(cors({
+  origin: (origin, callback) => {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true)
+    } else {
+      callback(new Error('CORS not allowed'))
+    }
+  },
+  credentials: true,
+}))
 app.use(express.json())
 
 function normalize(value = '') {
