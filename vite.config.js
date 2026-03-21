@@ -6,11 +6,13 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   server: {
+    // Local development proxy only
     proxy: {
-      '/api': process.env.VITE_API_URL || 'http://localhost:4000',
+      '/api': 'http://localhost:4000',
     },
   },
   define: {
+    // For production, use environment variable
     __API_URL__: JSON.stringify(process.env.VITE_API_URL || 'http://localhost:4000'),
   },
 })

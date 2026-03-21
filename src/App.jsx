@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import { API_URL } from './config'
 
 const defaultProfile = {
   qualification: '12th Pass',
@@ -363,7 +364,7 @@ function App() {
 
     async function loadPortal() {
       try {
-        const response = await fetch('/api/portal')
+        const response = await fetch(`${API_URL}/api/portal`)
         if (!response.ok) {
           throw new Error('Failed to load portal')
         }
@@ -428,7 +429,7 @@ function App() {
     setRoadmap(null)
 
     try {
-      const response = await fetch('/api/chat', {
+      const response = await fetch(`${API_URL}/api/chat`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
