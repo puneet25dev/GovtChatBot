@@ -14,10 +14,10 @@ status = 200
 
 # Environment variables for production
 [context.production.environment]
-VITE_API_URL = "https://govtchatbot-api.onrender.com"
+VITE_API_URL = "https://govtchatbot-1.onrender.com"
 
 [context.deploy-preview.environment]
-VITE_API_URL = "https://govtchatbot-api.onrender.com"
+VITE_API_URL = "https://govtchatbot-1.onrender.com"
 
 [context.branch-deploy.environment]
-VITE_API_URL = "https://govtchatbot-api.onrender.com"
+VITE_API_URL = "https://govtchatbot-1.onrender.com"
