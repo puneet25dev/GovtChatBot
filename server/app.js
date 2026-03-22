@@ -16,17 +16,24 @@ import {
 const app = express()
 
 // CORS configuration for production
+const normalizePath = (url) => url?.replace(/\/$/, '').toLowerCase() || ''
+
 const allowedOrigins = [
   'http://localhost:5173',           // Local development
   'http://localhost:3000',           // Alternative local port
-  process.env.FRONTEND_URL,          // Production frontend (set in Render env vars)
+  normalizePath(process.env.FRONTEND_URL),  // Production frontend (remove trailing slash)
 ].filter(Boolean)
+
+console.log('CORS allowed origins:', allowedOrigins)
+console.log('FRONTEND_URL env var:', process.env.FRONTEND_URL)
 
 app.use(cors({
   origin: (origin, callback) => {
-    if (!origin || allowedOrigins.includes(origin)) {
+    const normalizedOrigin = normalizePath(origin)
+    if (!origin || allowedOrigins.includes(normalizedOrigin)) {
       callback(null, true)
     } else {
+      console.warn(`CORS blocked origin: ${origin}`)
       callback(new Error('CORS not allowed'))
     }
   },
