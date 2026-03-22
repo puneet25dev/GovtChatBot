@@ -924,7 +924,7 @@ function App() {
                         {selectedJobId === job.id ? 'Roadmap Open' : 'View Roadmap'}
                       </button>
                       <a href={job.applyUrl} className="primary-button mt-5">
-                        Open Form
+                        Apply Link
                       </a>
                     </div>
                     <div className="readiness">
