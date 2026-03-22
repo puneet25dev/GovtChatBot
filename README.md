@@ -1,5 +1,5 @@
 # GovtChatBot
-[Open Project](https://chatbotguidejob.netlify.app/)
+[Open Project](https://chatbotguidejob.netlify.app/).
 GovtChatBot is a recruiter-ready government job discovery demo built with React, Vite, and Express. It combines a guided AI-style interview, resume-assisted profile extraction, match scoring, and job-specific preparation roadmaps in a single interface.
 
 The app is designed to feel like a smart job assistant rather than a static job board. A user can answer guided questions, upload resume text, view ranked job matches, and open a roadmap tailored to the job they select.
