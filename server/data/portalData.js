@@ -18,7 +18,7 @@ export const qualifications = [
   'Postgraduate',
 ]
 
-export const states = ['Any', 'Uttar Pradesh', 'Bihar', 'Delhi', 'Rajasthan', 'Madhya Pradesh', 'India']
+export const states = ['Any', 'Uttar Pradesh', 'Bihar', 'Delhi', 'Rajasthan', 'Madhya Pradesh', 'India','Telengana','Punjab','Gujrat','Maharastra','']
 
 export const jobs = [
   {
@@ -28,7 +28,7 @@ export const jobs = [
     location: 'Uttar Pradesh',
     sector: 'Police',
     lastDate: '25 May 2026',
-    applyUrl: '#apply-up-police-constable',
+    applyUrl: 'https://uppbpb.gov.in',
     urgencyDays: 12,
     description:
       'Large-volume police recruitment with strong fit for 12th pass candidates looking for field roles in Uttar Pradesh.',
@@ -41,7 +41,7 @@ export const jobs = [
     location: 'India',
     sector: 'Administration',
     lastDate: '10 June 2026',
-    applyUrl: '#apply-ssc-chsl',
+    applyUrl: 'https://ssc.gov.in',
     urgencyDays: 28,
     description:
       'Central recruitment option for 12th pass candidates who want broad clerical and assistant-level opportunities.',
@@ -54,7 +54,7 @@ export const jobs = [
     location: 'India',
     sector: 'Bank',
     lastDate: '18 June 2026',
-    applyUrl: '#apply-ibps-clerk',
+    applyUrl: 'https://www.ibps.in/',
     urgencyDays: 36,
     description:
       'Popular banking exam with nationwide posting opportunities and high demand from graduate candidates.',
@@ -67,7 +67,7 @@ export const jobs = [
     location: 'Uttar Pradesh',
     sector: 'Engineering',
     lastDate: '28 June 2026',
-    applyUrl: '#apply-junior-engineer-pwd',
+    applyUrl: 'https://pwd.maharashtra.gov.in/en/',
     urgencyDays: 46,
     description:
       'Technical role for diploma and engineering-track applicants interested in public works infrastructure.',
@@ -80,7 +80,7 @@ export const jobs = [
     location: 'Delhi',
     sector: 'Healthcare',
     lastDate: '15 June 2026',
-    applyUrl: '#apply-delhi-staff-nurse',
+    applyUrl: 'https://health.delhi.gov.in/health/nursing-vacancy-and-para-medical-staff-mohfw',
     urgencyDays: 33,
     description:
       'Healthcare recruitment suited to nursing graduates seeking stable urban government roles.',
@@ -93,7 +93,7 @@ export const jobs = [
     location: 'Bihar',
     sector: 'Administration',
     lastDate: '06 June 2026',
-    applyUrl: '#apply-bihar-revenue-assistant',
+    applyUrl: 'https://land.bihar.gov.in/landbihar/Default.aspx',
     urgencyDays: 24,
     description:
       'Administrative vacancy with strong relevance for graduates targeting Bihar state government work.',
@@ -112,7 +112,7 @@ export const hero = {
 }
 
 export const metrics = [
-  { label: 'Live job signals', value: '06' },
+  { label: 'Live job signals', value: jobs.length },
   { label: 'Profile-aware scoring', value: '100%' },
   { label: 'Actionable next steps', value: 'Yes' },
 ]
